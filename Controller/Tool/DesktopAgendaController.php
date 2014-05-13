@@ -268,6 +268,7 @@ class DesktopAgendaController extends Controller
             $data[$key]['end'] = $object->getEnd()->getTimestamp();
             $data[$key]['color'] = $object->getPriority();
             $data[$key]['visible'] = true;
+            $data[$key]['owner'] = $object->getUser()->getUsername();
         }
 
         return($data);
